@@ -26,7 +26,7 @@ public class PreparedStatementTest2 {
 		
 		Connection con=DriverManager.getConnection(url,user,pwd);
 		String sql="update emp set job=?, deptno=?, sal=? where empno=?";
-						
+						//인파라미터들은 set으로 받아
 		PreparedStatement pstmt=con.prepareStatement(sql);
 		pstmt.setString(1, job);
 		pstmt.setInt(2, dno);
